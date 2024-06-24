@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
-    <link rel="stylesheet" href="static/CSS/styles.css">
+    <link rel="stylesheet" href="/static/CSS/styles.css">
 </head>
 <body>
+<div class="video-background">
+    <video autoplay muted loop id="background-video">
+        <source src="https://ovo.earth/wp-content/uploads/2023/07/OVO_siteWeb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
 <div class="login-container">
     <h2>Inicio de Sesión</h2>
     <form id="login-form">
-        <label for="username">Usuario</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" required>
-
+        <div class="form-group">
+            <label for="username">Usuario</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+        </div>
         <button type="submit">Iniciar sesión</button>
     </form>
     <a href="#" id="register-link">¿No tienes cuenta? Regístrate</a>
 </div>
-<script src="static/JS/script.js"></script>
+<script src="/static/JS/script.js"></script>
 </body>
 </html>
