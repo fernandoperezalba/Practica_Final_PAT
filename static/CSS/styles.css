@@ -57,7 +57,7 @@ body, html {
 }
 
 .form-group input {
-    width: calc(100% - 20px); /* Ajustar el tamaño del input */
+    width: calc(100%); /* Ajustar el tamaño del input */
     padding: 8px 10px;
     margin: 0;
     border: 1px solid #ccc;
