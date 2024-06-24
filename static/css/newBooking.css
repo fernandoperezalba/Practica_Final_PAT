@@ -1,0 +1,547 @@
+.navbar-brand {
+    position: fixed;
+	margin-left: 50px;
+	font-size: 25px;
+}
+
+.nav-item {
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+#imagen_centro{
+    text-align: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Setting text color to white */
+}
+
+.dropdown-item {
+    color: rgb(0, 0, 0) !important; /* Setting text color to white */
+	font-size: 15px;
+}
+
+.navbar-nav {
+    font-family: Ubuntu-Bold;
+    margin: 0 auto; /* This will center the navbar items */
+    display: flex;
+    align-items: center; /* Align items vertically in the middle */
+}
+
+
+.fixed-logo {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    transform: translateY(-50%);
+    z-index: 1000; /* Ensure the logo stays above other content */
+}
+
+.main_body {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Adjust margin between Welcome and action boxes */
+}
+
+.col {
+    margin: 0 5px; /* Adjust margin between columns */
+}
+
+.action-box {
+    font-family: Ubuntu-Bold;
+    text-decoration: none;
+    color: inherit;
+    background-color: black;
+    color: white;
+    display: block;
+    transition: transform 0.3s ease;
+	height: 250px;
+    width: 500px;
+}
+
+.action-content {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.action-box h3 {
+    margin-top: 0;
+}
+
+.action-box p {
+    margin-bottom: 10px;
+}
+
+#mainTitle{
+    font-family: Ubuntu-Bold;
+	text-align: center;
+	font-size: 40pt;
+	color: #000000;
+	margin-top: 100px;
+	margin-bottom: 20px;
+	background-color: rgba(255, 255, 255, 0.8); /* Add background color for readability */
+    padding: 10px 20px; /* Add padding for readability */
+    border-radius: 5px; /* Optional: Add border radius for style */
+}
+
+.submit_booking_btn {
+    font-family: Ubuntu-Bold;
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.2;
+    text-transform: uppercase;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 42px;
+    border-radius: 21px;
+  
+    background: #d41872;
+    background: -webkit-linear-gradient(left, #ffffff, #ffffff, #ffffff);
+    position: relative;
+    z-index: 1;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+.submit_booking_btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+    background-color: #b9b7b7;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+.submit_booking_btn:hover {
+    background-color: transparent;
+  }
+  
+.submit_booking_btn:hover:before {
+    opacity: 1;
+  }
+  
+.video-container{
+    position: relative;
+    width: 100%;
+	height: auto;
+}
+
+.video-container video {
+    position: absolute;
+	margin-top: -70px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1; /* Ensures the video remains behind other content */
+	opacity: 0.6;
+}
+
+
+/* copia main.css */
+
+
+/*---------------------------------------------*/
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-moz-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:transparent; }
+
+input::-webkit-input-placeholder { color: #555555;}
+input:-moz-placeholder { color: #555555;}
+input::-moz-placeholder { color: #555555;}
+input:-ms-input-placeholder { color: #555555;}
+
+textarea::-webkit-input-placeholder { color: #555555;}
+textarea:-moz-placeholder { color: #555555;}
+textarea::-moz-placeholder { color: #555555;}
+textarea:-ms-input-placeholder { color: #555555;}
+
+label {
+  margin: 0;
+  display: block;
+}
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Utility ]*/
+.txt1 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  color: #e5e5e5;
+  line-height: 1.5;
+}
+
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -200px;
+  }
+  
+  .container-login100 {
+    width: 100%;  
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;  
+  }
+  
+  .container-login100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(0,0,0,0.65); */
+  }
+  
+  .wrap-login100 {
+    width: 390px;
+    border-radius: 10px;
+    overflow: hidden;
+  
+    background: transparent;
+  }
+  
+  
+  /*------------------------------------------------------------------
+  [ Form ]*/
+  
+  .login100-form {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .login100-form-logo {
+    font-size: 60px; 
+    color: #333333;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+  
+  .login100-form-title {
+    font-family: Ubuntu-Bold;
+    font-size: 28px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+  
+    display: block;
+  }
+  
+  
+  /*------------------------------------------------------------------
+  [ Input ]*/
+  
+  .wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 29px 0;
+  }
+  
+  .input100 {
+    font-family: Ubuntu-Regular;
+    font-size: 20px;
+    color: #555555;
+    line-height: 1.2;
+  
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    padding: 0 10px 0 80px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  /*---------------------------------------------*/ 
+  .focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .focus-input100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  
+    background: #000000;
+    background: -webkit-linear-gradient(left, #8d8d8d, #252525, #000000);
+    /* background: -o-linear-gradient(left, #B6E3E5, #B7DCDE, #519EA3);
+    background: -moz-linear-gradient(left, #B6E3E5, #B7DCDE, #519EA3);
+    background: linear-gradient(left, #B6E3E5, #B7DCDE, #519EA3); */
+  }
+  
+  .focus-input100::after {
+    font-family: Linearicons-Free;
+    font-size: 18px;
+    color: #999999;
+  
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 35px;
+   
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .input100:focus {
+    padding-left: 60px;
+  }
+  
+  .input100:focus + .focus-input100::after {
+    left: 23px;
+    color: #000000;
+  }
+  
+  .input100:focus + .focus-input100::before {
+    width: 100%;
+  }
+  
+  .has-val.input100 + .focus-input100::after {
+    left: 23px;
+    color: #000000;
+  }
+  
+  .has-val.input100 + .focus-input100::before {
+    width: 100%;
+  }
+  
+  .has-val.input100 {
+    padding-left: 60px;
+  }
+  
+  
+  /*------------------------------------------------------------------
+  [ Button ]*/
+  .container-login100-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 20px; /* Agrega padding al botón */
+  }
+  
+  .login100-form-btn {
+    font-family: Ubuntu-Bold;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 42px;
+    border-radius: 21px;
+  
+    background: -webkit-linear-gradient(left, #000000, #000000, #000000);
+    position: relative;
+    z-index: 1;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .login100-form-btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+    background-color: #555555;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .login100-form-btn:hover {
+    background-color: transparent;
+  }
+  
+  .login100-form-btn:hover:before {
+    opacity: 1;
+  }
+
+  .wrap-input100 select.input100 {
+    border: none;
+}
+
+#date-range {
+    width: 80%; /* Ajustar el ancho según sea necesario */
+    margin: 10px; /* Ajustar el padding según sea necesario */
+}
+
+/* Ajustar el tamaño del texto en el input de fecha */
+#date-range {
+    font-size: 16px; /* Ajustar el tamaño del texto según sea necesario */
+}
+
+label {
+  font-family: Ubuntu-Regular; /* Use the same font-family as input fields */
+  font-size: 20px; /* Set font size to match input fields */
+  color: #555555; /* Set font color */
+  display: block; /* Ensure labels are displayed as blocks */
+  text-align: left; /* Align labels to the left */
+  margin-bottom: 10px; /* Add some space between label and input */
+  margin-left:-75px;
+}
+
+.dates_label {
+  font-family: Ubuntu-Regular; /* Use the same font-family as input fields */
+  font-size: 20px; /* Set font size to match input fields */
+  color: #555555; /* Set font color */
+  text-align: left; /* Align labels to the left */
+  margin-bottom: 10px; /* Add some space between label and input */
+  margin-left:-175px;
+}
+
+.city_label {
+  font-family: Ubuntu-Regular; /* Use the same font-family as input fields */
+  font-size: 20px; /* Set font size to match input fields */
+  color: #555555; /* Set font color */
+  text-align: left; /* Align labels to the left */
+  margin-bottom: 10px; /* Add some space between label and input */
+  margin-left:-140px;
+}

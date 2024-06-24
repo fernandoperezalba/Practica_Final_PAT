@@ -1,0 +1,121 @@
+#mainTitle{
+	text-align: center;
+	font-size: 40pt;
+	font-family: Ubuntu-Bold;
+	color: #000000;
+	margin-top: 100px;
+	margin-bottom: 20px;
+	background-color: rgba(255, 255, 255, 0.8); /* Add background color for readability */
+    padding: 10px 20px; /* Add padding for readability */
+    border-radius: 5px; /* Optional: Add border radius for style */
+}
+
+.navbar-brand {
+    position: fixed;
+	margin-left: 50px;
+	font-size: 25px;
+}
+
+.nav-item {
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+#imagen_centro{
+    text-align: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Setting text color to white */
+}
+
+.dropdown-item {
+    color: rgb(0, 0, 0) !important; /* Setting text color to white */
+	font-size: 15px;
+}
+
+.navbar-nav {
+	font-family: Ubuntu-Bold;
+    margin: 0 auto; /* This will center the navbar items */
+    display: flex;
+    align-items: center; /* Align items vertically in the middle */
+}
+
+.video-container{
+    position: relative;
+    width: 100%;
+	height: auto;
+}
+
+.video-container video {
+    position: absolute;
+	margin-top: -70px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1; /* Ensures the video remains behind other content */
+	opacity: 0.6;
+}
+
+.fixed-logo {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    transform: translateY(-50%);
+    z-index: 1000; /* Ensure the logo stays above other content */
+}
+
+.main_body {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Adjust margin between Welcome and action boxes */
+}
+
+.col {
+    flex: 0 0 200px; /* Adjust width of columns */
+    margin: 0 5px; /* Adjust margin between columns */
+}
+
+.action-box {
+	font-family: Ubuntu-Bold;
+    text-decoration: none;
+    color: inherit;
+    background-color: black;
+    color: white;
+    display: block;
+    transition: transform 0.3s ease;
+	height: 250px;
+	font-size: 15px;
+}
+
+.action-box:hover {
+    transform: translateY(-5px); /* Adjust hover effect */
+	color: white;
+}
+
+.action-content {
+    padding: 20px;
+}
+
+.action-box h3 {
+    margin-top: 0;
+}
+
+.action-box p {
+    margin-bottom: 10px;
+}
