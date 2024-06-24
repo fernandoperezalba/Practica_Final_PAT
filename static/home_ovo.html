@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="data/images/ovo_icon.jpg"/>
+
+    <!-- <script type="text/javascript" src="js/home.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></script>
+    <link href="css/homeClient.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="js/ayudante.js"></script> -->
+
+    <style>
+        .btn-outline-light:hover {
+            color: black; /* Change text color to black on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="video-container">
+    <video loop autoplay playsinline muted id="background-video" preload="none" style="width: 100%; height: auto;">
+        <source type="video/mp4" src="https://ovo.earth/wp-content/uploads/2023/07/OVO_siteWeb.mp4">
+    </video>
+</div>
+
+<nav class="navbar navbar-expand-xl navbar-light fixed-top" style="background-color: rgba(0, 0, 0, 0.85);">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="home_ovo.html">
+            <img src="data/images/logo_ovo_blanc.png" alt="Logo" height="50" class="fixed-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home_ovo.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="true">
+                        <img src="data/images/user_icon_white.svg" alt="Logout" height="40">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ADD HERE MAIN BODY -->
+
+<div class="main_body">
+    <div class="row">
+        <div class="col">
+            <h2 id="mainTitle">Welcome Admin</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a href="new_booking.html" class="action-box">
+                <div class="action-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- Riders' Table -->
+                            <div class="col-md-4">
+                                <h2 style="font-size: 30px;">Riders</h2>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Employee Page</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Dummy data for riders -->
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td style="color: rgb(117, 117, 255); text-decoration: underline;">More info</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jane Smith</td>
+                                            <td style="color: rgb(117, 117, 255); text-decoration: underline;">More info</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alice Johnson</td>
+                                            <td style="color: rgb(117, 117, 255); text-decoration: underline;">More info</td>
+                                        </tr>
+                                        <!-- Add more rows for other riders -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Couriers' Table -->
+                            <div class="col-md-4">
+                                <h2 style="font-size: 30px;">Couriers</h2>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Employee Page</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Dummy data for couriers -->
+                                        <tr>
+                                            <td>Mike Johnson</td>
+                                            <td style="color: rgb(117, 117, 255); text-decoration: underline;">More info</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sara Brown</td>
+                                            <td style="color: rgb(117, 117, 255); text-decoration: underline;">More info</td>
+                                        </tr>
+                                        <tr>
+                                            <td>David Smith</td>
+                                            <td style="color: rgb(117, 117, 255); text-decoration: underline;">More info</td>
+                                        </tr>
+                                        <!-- Add more rows for other couriers -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Nanohubs' Table -->
+                            <div class="col-md-4">
+                                <h2 style="font-size: 30px;">Nanohubs</h2>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nanohub ID</th>
+                                            <th>Battery Percentage</th>
+                                            <th>Availability</th>
+                                            <th>Unlock</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Dummy data for nanohubs -->
+                                        <tr>
+                                            <td>Nano-Hub AB12C34D</td>
+                                            <td>75%</td>
+                                            <td><span class="badge badge-success badge-pill">•</span>
+                                                <span class="badge badge-danger badge-pill">•</span></td>
+                                            <td><button class="btn btn-primary btn-outline-light">Unlock</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nano-Hub BX12R89T</td>
+                                            <td>90%</td>
+                                            <td><span class="badge badge-success badge-pill">•</span>
+                                                <span class="badge badge-success badge-pill">•</span></td>
+                                            <td><button class="btn btn-primary btn-outline-light">Unlock</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nano-Hub CD23E45F</td>
+                                            <td>60%</td>
+                                            <td><span class="badge badge-success badge-pill">•</span>
+                                                <span class="badge badge-danger badge-pill">•</span></td>
+                                            <td><button class="btn btn-primary btn-outline-light">Unlock</button></td>
+                                        </tr>
+                                        <!-- Add more rows for other nanohubs -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

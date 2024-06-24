@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="data/images/ovo_icon.jpg"/>
+
+    <!-- <script type="text/javascript" src="js/home.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></script>
+    <link href="css/homeClient.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="js/ayudante.js"></script> -->
+
+</head>
+<body>
+
+<div class="video-container">
+    <video loop autoplay playsinline muted id="background-video" preload="none" style="width: 100%; height: auto;">
+        <source type="video/mp4" src="https://ovo.earth/wp-content/uploads/2023/07/OVO_siteWeb.mp4">
+    </video>
+</div>
+
+<nav class="navbar navbar-expand-xl navbar-light fixed-top" style="background-color: rgba(0, 0, 0, 0.85);">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="home_client.html">
+            <img src="data/images/logo_ovo_blanc.png" alt="Logo" height="50" class="fixed-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home_client.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="new_booking.html">New Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Tiempo.html">My Bookings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Cocina.html">Support</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="true">
+                        <img src="data/images/user_icon_white.svg" alt="Logout" height="40">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="main_body">
+    <div class="row">
+        <div class="col">
+            <h2 id="mainTitle">Welcome</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a href="new_booking.html" class="action-box">
+                <div class="action-content">
+                    <h1>New Booking</h1>
+                    <p></p>
+                    <p>Click here to make a new reservation for a nano hub.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="Tiempo.html" class="action-box">
+                <div class="action-content">
+                    <h1>My Bookings</h1>
+                    <p></p>
+                    <p>Click here to view your most recent bookings.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="Cocina.html" class="action-box">
+                <div class="action-content">
+                    <h1>Call Support</h1>
+                    <p></p>
+                    <p>Click here to get support for any issues.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
+
