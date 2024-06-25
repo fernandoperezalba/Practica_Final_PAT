@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="icon" href="https://ovo.earth/wp-content/uploads/2020/08/cropped-logo_ovo_blancSnoir_carre-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="CSS/home_client.css">
+    <script src="JS/home_client.js"></script>
+</head>
+<body>
+
+<div class="video-container">
+    <video loop autoplay playsinline muted id="background-video" preload="none">
+        <source type="video/mp4" src="https://ovo.earth/wp-content/uploads/2023/07/OVO_siteWeb.mp4">
+    </video>
+</div>
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <a class="navbar-brand" href="home_client.html">
+            <img src="data/images/logo_ovo_blanc.png" alt="Logo" class="fixed-logo">
+        </a>
+        <button class="navbar-toggler" id="navbarToggler">
+            &#9776;
+        </button>
+        <ul class="navbar-menu" id="navbarMenu">
+            <li class="nav-item">
+                <a class="nav-link" href="home_client.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_booking.html">New Booking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Tiempo.html">My Bookings</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdown">
+                    <img src="data/images/user_icon_white.svg" alt="Account" class="account-icon">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main_body">
+    <h2 id="mainTitle">Welcome, 'client_name'</h2>
+    <div class="action-container">
+        <a href="new_booking.html" class="action-box">
+            <div class="action-content">
+                <h1>New Booking</h1>
+                <p>Click here to make a new reservation for a nano hub.</p>
+            </div>
+        </a>
+        <a href="Tiempo.html" class="action-box">
+            <div class="action-content">
+                <h1>My Bookings</h1>
+                <p>Click here to view your most recent bookings.</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
