@@ -56,7 +56,7 @@ body, html {
     margin-bottom: 5px;
 }
 
-.form-group input {
+.form-group input, .form-group select {
     width: calc(100%); /* Ajustar el tamaño del input */
     padding: 8px 10px;
     margin: 0;
