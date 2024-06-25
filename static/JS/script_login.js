@@ -18,14 +18,5 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 
 document.getElementById('register-link').addEventListener('click', function(event) {
     event.preventDefault();
-    // Lógica para manejar el registro
     window.location.href = 'register.html'; // Cambia 'register.html' por la ruta de tu página de registro
 });
-
-document.getElementById('login-link').addEventListener('click', function(event) {
-    event.preventDefault();
-    // Lógica para volver al login desde register
-    window.location.href = 'login.html'; // Cambia 'login.html' por la ruta de tu página de registro
-});
-
-
