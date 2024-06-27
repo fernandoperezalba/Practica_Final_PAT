@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <title>Reservas y Operaciones</title>
     <link rel="icon" href="https://ovo.earth/wp-content/uploads/2020/08/cropped-logo_ovo_blancSnoir_carre-32x32.png" sizes="32x32">
-    <link rel="stylesheet" href="CSS/home_admin.css">
-    <link rel="stylesheet" href="CSS/reservations.css">
-    <script src="JS/home_admin.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/bookings_and_operations.css">
 </head>
 <body>
 
@@ -23,20 +22,21 @@
                 <a class="nav-link" href="home_admin.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="gestion_almacenes.html">Gestión Almacenes</a>
+                <a class="nav-link" href="warehouse_management.html">Warehouse Management</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="reservas_y_operaciones.html">Reservas y Operaciones</a>
+                <a class="nav-link" href="bookings_and_operations.html">Bookings and Operations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="clientes.html">Clientes</a>
+                <a class="nav-link" href="customers.html">Customers</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link" href="#" id="navbarDropdown">
                     <img src="data/images/user_icon_white.svg" alt="Account" class="account-icon">
+                    &#9662;
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                    <li><a class="dropdown-item" href="login.html">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -45,7 +45,7 @@
 
 <div class="container">
     <div class="reservations-section">
-        <h2>Reservas Activas</h2>
+        <h2>Active Bookings</h2>
         <div class="table-wrapper">
             <table class="reservations-table">
                 <thead>
@@ -107,13 +107,15 @@
         </div>
     </div>
     <div class="operations-section">
-        <h2>Operaciones</h2>
+        <h2>Operations</h2>
         <div class="operations-buttons">
-            <button class="operations-button" onclick="location.href='operaciones_reservas.html'">Operaciones Reservas</button>
-            <button class="operations-button" onclick="location.href='operaciones_huecos.html'">Operaciones Huecos</button>
+            <button class="operations-button" onclick="location.href='booking_operations.html'">Booking Operations</button>
+            <button class="operations-button" onclick="location.href='slots_operations.html'">Slots Operations</button>
         </div>
     </div>
 </div>
 
+<script src="JS/bookings_and_operations.js"></script>
+<script src="JS/script.js"></script>
 </body>
 </html>

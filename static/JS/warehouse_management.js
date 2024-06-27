@@ -1,32 +1,3 @@
-// Añade un evento para cerrar el dropdown al hacer clic fuera de él
-document.addEventListener('click', function(event) {
-    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
-    dropdownMenus.forEach(menu => {
-        if (!menu.contains(event.target)) {
-            menu.style.display = 'none';
-        }
-    });
-});
-
-// Añade un evento para que el dropdown se mantenga abierto cuando se está sobre él
-const dropdownTogglers = document.querySelectorAll('.nav-item.dropdown');
-dropdownTogglers.forEach(toggler => {
-    toggler.addEventListener('mouseover', function() {
-        const dropdownMenu = toggler.querySelector('.dropdown-menu');
-        dropdownMenu.style.display = 'block';
-    });
-
-    toggler.addEventListener('mouseout', function() {
-        const dropdownMenu = toggler.querySelector('.dropdown-menu');
-        dropdownMenu.style.display = 'none';
-    });
-});
-
-/*
-======================================================================================================
-GESTIÓN ALMACENES
-*/
-
 const warehouses = [
     {
         id: 'AB12C34D',
@@ -164,22 +135,4 @@ function updateSlotSituation(select) {
 
     // Aquí puedes actualizar la situación del hueco en tu base de datos
     console.log(`Situación del hueco ${slotIndex} del almacén ${warehouseId} cambiado a ${newSituation}`);
-}
-
-/*
-==================================================================================================
-Reservas y operaciones
-*/
-
-function cancelReservation(reservationId) {
-    // Aquí puedes hacer la llamada al backend para cancelar la reserva (cuando esté implementado)
-
-    // Eliminar la fila de la tabla para actualizar la UI
-    const reservationItem = document.querySelector(`.reservation-item[data-reservation-id='${reservationId}']`);
-    if (reservationItem) {
-        reservationItem.remove();
-    }
-
-    // Mostrar un mensaje opcionalmente
-    alert(`Reserva ${reservationId} cancelada.`);
 }
