@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="icon" href="https://ovo.earth/wp-content/uploads/2020/08/cropped-logo_ovo_blancSnoir_carre-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/home_admin.css">
+</head>
+<body>
+
+<div class="video-container">
+    <video loop autoplay playsinline muted id="background-video" preload="none">
+        <source type="video/mp4" src="https://ovo.earth/wp-content/uploads/2023/07/OVO_siteWeb.mp4">
+    </video>
+</div>
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <a class="navbar-brand" href="home_client.html">
+            <img src="data/images/logo_ovo_blanc.png" alt="Logo" class="fixed-logo">
+        </a>
+        <button class="navbar-toggler" id="navbarToggler">
+            &#9776;
+        </button>
+        <ul class="navbar-menu" id="navbarMenu">
+            <li class="nav-item">
+                <a class="nav-link" href="home_admin.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="warehouse_management.html">Warehouse Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bookings_and_operations.html">Bookings and Operations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="customers.html">Customers</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdown">
+                    <img src="data/images/user_icon_white.svg" alt="Account" class="account-icon">
+                    &#9662;
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main_body">
+    <h2 id="mainTitle">Welcome admin</h2>
+    <div class="action-container">
+        <a href="gestion_almacenes.html" class="action-box">
+            <div class="action-content">
+                <h1>Gestión Almacenes</h1>
+                <p>Pulsa aquí para ver el listado de almacenes y su estado.</p>
+            </div>
+        </a>
+        <a href="reservas_y_operaciones.html" class="action-box">
+            <div class="action-content">
+                <h1>Reservas y Operaciones</h1>
+                <p>Pulsa aquí para obtener información sobre reservas actuales y operaciones.</p>
+            </div>
+        </a>
+        <a href="clientes.html" class="action-box">
+            <div class="action-content">
+                <h1>Clientes</h1>
+                <p>Pulsa aquí para ver el listado de todos los usuarios.</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<script src="JS/script.js"></script>
+<script src="JS/home_admin.js"></script>
+</body>
+</html>
