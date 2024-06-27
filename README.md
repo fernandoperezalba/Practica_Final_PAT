@@ -3,8 +3,8 @@ Practica Final de PAT de Alejandro Alaman San Martin &amp; Fernando Pérez Alba
 
 login => register, home_admin, home_client, home_delivery
 
-home_admin => gestion_almacenes, reservas_y_operaciones, clientes
+home_admin => warehouse_management, bookings_and_operations, customers
 
-reservas_y_operaciones => tabla_operaciones_huecos, tabla_operaciones_reservas
+home_client => new_booking, my_bookings
 
-home_delivery => nueva_entrega/recogida , historico_delivery
+bookings_and_operations => booking_operations, slots_operations
