@@ -1,0 +1,117 @@
+const warehouses = [
+    {
+        id: 'AB12C34D',
+        address: 'Calle Blasco de Garay 4, 28015, Madrid, España',
+        maxCapacity: 4,
+        freeCapacity: 1,
+        creationDate: '2023-01-01',
+        lastReview: '2024-01-01',
+        location: null, // Será geocodificado
+        slots: [
+            { status: 'Abierto', situation: 'En funcionamiento' },
+            { status: 'Cerrado', situation: 'Bloqueado' },
+            { status: 'Abierto', situation: 'En funcionamiento' },
+            { status: 'Abierto', situation: 'En funcionamiento' }
+        ]
+    },
+    {
+        id: 'BX12R89T',
+        address: 'Paseo de la Castellana 80, 28046, Madrid, España',
+        maxCapacity: 2,
+        freeCapacity: 2,
+        creationDate: '2023-01-01',
+        lastReview: '2024-01-01',
+        location: null, // Será geocodificado
+        slots: [
+            { status: 'Abierto', situation: 'En funcionamiento' },
+            { status: 'Abierto', situation: 'En funcionamiento' }
+        ]
+    },
+    {
+        id: 'CX12R89T',
+        address: 'Avenida del Litoral 34, 08005, Sant Martí, Barcelona, España',
+        maxCapacity: 2,
+        freeCapacity: 2,
+        creationDate: '2023-01-01',
+        lastReview: '2024-01-01',
+        location: null, // Será geocodificado
+        slots: [
+            { status: 'Abierto', situation: 'En funcionamiento' },
+            { status: 'Abierto', situation: 'En funcionamiento' }
+        ]
+    }
+    // Agrega más almacenes según sea necesario
+];
+
+let map, markers = [];
+
+async function initMap() {
+    map = L.map('map').setView([0, 0], 2);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Geocodificar direcciones y añadir marcadores
+    await Promise.all(warehouses.map(async (warehouse, index) => {
+        const location = await geocodeAddress(warehouse.address);
+        warehouse.location = location;
+
+        const marker = L.marker(location).addTo(map)
+            .bindPopup(`<div><strong>${warehouse.id}</strong><br>${warehouse.address}</div>`);
+
+        marker.on('click', () => {
+            map.setView(location, 14);
+            marker.openPopup();
+        });
+
+        markers.push(marker);
+
+        // Añadir el punto a la lista
+        const listItem = document.createElement('li');
+        listItem.className = 'warehouse-item';
+        listItem.innerHTML = `
+            <div class="warehouse-id" data-index="${index}"><strong>ID:</strong> ${warehouse.id}</div>
+            <div><strong>Dirección:</strong> ${warehouse.address}</div>
+            <div><strong>Capacidad:</strong> ${warehouse.freeCapacity}/${warehouse.maxCapacity}</div>
+            <div><strong>Fecha de creación:</strong> ${warehouse.creationDate}</div>
+            <div><strong>Última revisión:</strong> ${warehouse.lastReview}</div>
+            <div><strong>Disponibilidad:</strong>
+                ${Array(warehouse.maxCapacity).fill().map((_, i) => {
+                    return `<span class="badge ${i < warehouse.freeCapacity ? 'badge-success' : 'badge-danger'}"></span>`;
+                }).join(' ')}
+            </div>
+            <div>
+                <strong>Huecos:</strong>
+                ${warehouse.slots.map((slot, i) => {
+                    return `<div class="slot">
+                        <span>Hueco ${i + 1}: </span>
+                        <input type="checkbox" data-id="${warehouse.id}" data-slot="${i}" class="slot-checkbox">
+                    </div>`;
+                }).join('')}
+            </div>
+        `;
+        listItem.querySelector('.warehouse-id').addEventListener('click', () => {
+            map.setView(location, 14);
+            marker.openPopup();
+        });
+        document.getElementById('warehouse-list').appendChild(listItem);
+    }));
+
+    map.setView(warehouses[0].location, 14);
+
+    // Inicializar calendarios
+    $("#start-date").datepicker();
+    $("#end-date").datepicker();
+}
+
+async function geocodeAddress(address) {
+    const apiKey = 'e17f9f72dbd44f93bbe8e1b7b07d7166';
+    const response = await fetch(`https://api.geoapify.com/v1/geocode/search?text=${encodeURIComponent(address)}&apiKey=${apiKey}`);
+    const data = await response.json();
+    if (data.features.length > 0) {
+        const { lat, lon } = data.features[0].properties;
+        return [lat, lon];
+    }
+    throw new Error('Geocoding failed');
+}
