@@ -1,11 +1,10 @@
-
-/*
-=================================================================================
-USUARIOS/CUENTAS
-*/
-
-/* CSS para la página de Cuentas de Usuarios */
-
+.container {
+    margin: 80px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
 
 .accounts-section {
     flex-basis: 100%;
