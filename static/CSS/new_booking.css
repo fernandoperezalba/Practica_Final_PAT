@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    position: relative;
+    margin: 20px;
+    padding-top: 100px;
+}
+.form-container {
+    width: 50%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.warehouse-container {
+    margin-top: 20px;
+}
+.warehouse-list {
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+    height: calc(80vh - 200px);
+}
+.warehouse-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.warehouse-item div {
+    margin-bottom: 10px;
+}
+.badge {
+    border-radius: 50%;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+.badge-success {
+    background-color: green;
+}
+.badge-danger {
+    background-color: red;
+}
+.status-controls label {
+    margin-right: 5px;
+}
+.status-controls input[type="radio"] {
+    margin-right: 10px;
+}
+.map-container {
+    position: fixed;
+    right: 0;
+    padding-right: 20px;
+    width: 50%;
+    height: 75%;
+    box-sizing: border-box;
+}
+#map {
+    height: 100%;
+    width: 100%;
+}
+.warehouse-id {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.reserve-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reserve-button:hover {
+    background-color: #555555;
+}
