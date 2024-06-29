@@ -1,0 +1,74 @@
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.operations-section1 {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    max-height: 65vh;
+    margin: 90px 20px 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.operations-section1 h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 40vh;
+}
+
+.operations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.operations-table th, .operations-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.operations-table th {
+    background-color: #f2f2f2;
+}
+
+.operations-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.operations-table tbody tr:hover {
+    background-color: #e9f5f5;
+}
+
+.centered-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.operations-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.operations-button:hover {
+    background-color: #555555;
+}

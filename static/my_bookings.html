@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Reservar Huecos de Almacén</title>
+    <title>Home</title>
     <link rel="icon" href="https://ovo.earth/wp-content/uploads/2020/08/cropped-logo_ovo_blancSnoir_carre-32x32.png" sizes="32x32">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/new_booking.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
-<body onload="initMap()">
+<body>
 
 <nav class="navbar">
     <div class="navbar-container">
@@ -41,32 +38,6 @@
         </ul>
     </div>
 </nav>
-
-<div class="container">
-    <div class="form-container">
-        <h2>Reservar Huecos de Almacén</h2>
-        <form id="reservation-form">
-            <label for="start-date">Fecha de inicio:</label>
-            <input type="text" id="start-date" name="start-date">
-            <label for="end-date">Fecha final:</label>
-            <input type="text" id="end-date" name="end-date">
-        </form>
-        <div class="warehouse-container">
-            <h2>Lista de Almacenes</h2>
-            <ul id="warehouse-list" class="warehouse-list"></ul>
-        </div>
-    </div>
-    <div class="map-container">
-        <div id="map"></div>
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="JS/warehouse_management.js"></script>
-</body>
-</html>
 
 <script src="JS/script.js"></script>
 </body>
