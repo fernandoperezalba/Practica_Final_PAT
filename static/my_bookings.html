@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>My Bookings</title>
     <link rel="icon" href="https://ovo.earth/wp-content/uploads/2020/08/cropped-logo_ovo_blancSnoir_carre-32x32.png" sizes="32x32">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/my_bookings.css">
+    <!-- Para mapas interactivos: -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 </head>
 <body>
 
@@ -27,7 +30,7 @@
                 <a class="nav-link" href="my_bookings.html">My Bookings</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="navbarDropdown">
+                <a class="nav-link" id="navbarDropdown">
                     <img src="data/images/user_icon_white.svg" alt="Account" class="account-icon">
                     &#9662;
                 </a>
@@ -39,6 +42,42 @@
     </div>
 </nav>
 
+<div class="container">
+    <div class="bookings-section">
+        <h2>My Bookings</h2>
+        <div class="buttons-container">
+            <button class="filter-button" data-status="active">Active</button>
+            <button class="filter-button" data-status="completed">Completed</button>
+            <button class="filter-button" data-status="cancelled">Cancelled</button>
+        </div>
+        <div class="table-wrapper">
+            <table class="bookings-table">
+                <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Warehouse ID</th>
+                    <th>Slots ID</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Delivery Code</th>
+                    <th>Pickup Code</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="bookings-list">
+                <!-- Placeholder para las reservas -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+</div>
+
+<script src="JS/my_bookings.js"></script>
 <script src="JS/script.js"></script>
+<!-- Para mapas interactivos: -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </body>
 </html>

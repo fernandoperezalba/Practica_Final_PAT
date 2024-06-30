@@ -193,8 +193,28 @@ async function geocodeAddress(address) {
 }
 
 // Listener para el botón de reserva (adaptar según backend)
-document.getElementById('reserve-button').addEventListener('click', () => {
-    alert('¡Reserva realizada!'); // Simulación de reserva exitosa
+document.getElementById('reserve-button').addEventListener('click', (event) => {
+    event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+    // Obtener las fechas de los campos de entrada
+    const startDate = new Date($("#start-date").val());
+    const endDate = new Date($("#end-date").val());
+
+    // Verificar si las fechas son válidas
+    if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+        alert('Please, select valid dates.');
+        return;
+    }
+
+    // Verificar si al menos un checkbox está seleccionado
+    const checkboxes = document.querySelectorAll('.slot-checkbox:checked');
+    if (checkboxes.length === 0) {
+        alert('Please, select at least one slot.');
+        return;
+    }
+
+    // Si todas las validaciones pasan, realizar la reserva
+    alert('¡Reservation successful!'); // Simulación de reserva exitosa
     window.location.href = 'home_client.html'; // Redirige al home después de la reserva
 });
 

@@ -13,5 +13,5 @@ function cancelReservation(reservationId) {
     }
 
     // Mostrar un mensaje opcionalmente
-    alert(`Reserva ${reservationId} cancelada.`);
+    alert(`Booking ${reservationId} cancelled.`);
 }
