@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Reservas y Operaciones</title>
+    <title>Bookings and Operations</title>
     <link rel="icon" href="https://ovo.earth/wp-content/uploads/2020/08/cropped-logo_ovo_blancSnoir_carre-32x32.png" sizes="32x32">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/bookings_and_operations.css">
@@ -50,15 +50,15 @@
             <table class="reservations-table">
                 <thead>
                 <tr>
-                    <th>ID Reserva</th>
-                    <th>ID Cliente</th>
-                    <th>ID Huecos</th>
-                    <th>Cantidad</th>
-                    <th>Fecha Inicio</th>
-                    <th>Fecha Fin</th>
-                    <th>Código Entrega</th>
-                    <th>Código Recogida</th>
-                    <th>Acciones</th>
+                    <th>Booking ID</th>
+                    <th>Client ID</th>
+                    <th>Slots ID</th>
+                    <th>Quantity</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Delivery Code</th>
+                    <th>Pickup Code</th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody id="reservations-list">
@@ -72,7 +72,7 @@
                     <td>2024-06-28 12:00:00</td>
                     <td>ENT12345</td>
                     <td>REC67890</td>
-                    <td><button class="cancel-button" onclick="cancelReservation(1)">Cancelar</button></td>
+                    <td><button class="cancel-button" onclick="cancelReservation(1)">Cancel</button></td>
                 </tr>
                 <tr class="reservation-item">
                     <td>Reserva2</td>
@@ -83,7 +83,7 @@
                     <td>2024-06-28 12:00:00</td>
                     <td>ENT12345</td>
                     <td>REC67890</td>
-                    <td><button class="cancel-button" onclick="cancelReservation(2)">Cancelar</button></td>
+                    <td><button class="cancel-button" onclick="cancelReservation(2)">Cancel</button></td>
                 </tr>
                 <tr class="reservation-item">
                     <td>Reserva3</td>
@@ -94,7 +94,7 @@
                     <td>2024-06-28 12:00:00</td>
                     <td>ENT12345</td>
                     <td>REC67890</td>
-                    <td><button class="cancel-button" onclick="cancelReservation(3)">Cancelar</button></td>
+                    <td><button class="cancel-button" onclick="cancelReservation(3)">Cancel</button></td>
                 </tr>
                 <tr class="reservation-item">
                     <td>Reserva4</td>
@@ -105,7 +105,7 @@
                     <td>2024-06-28 12:00:00</td>
                     <td>ENT12345</td>
                     <td>REC67890</td>
-                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancelar</button></td>
+                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancel</button></td>
                 </tr>
                 <tr class="reservation-item">
                     <td>Reserva4</td>
@@ -116,7 +116,7 @@
                     <td>2024-06-28 12:00:00</td>
                     <td>ENT12345</td>
                     <td>REC67890</td>
-                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancelar</button></td>
+                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancel</button></td>
                 </tr>
                 <tr class="reservation-item">
                     <td>Reserva4</td>
@@ -127,7 +127,7 @@
                     <td>2024-06-28 12:00:00</td>
                     <td>ENT12345</td>
                     <td>REC67890</td>
-                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancelar</button></td>
+                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancel</button></td>
                 </tr>
                 <tr class="reservation-item">
                     <td>Reserva4</td>
@@ -138,7 +138,7 @@
                     <td>2024-06-28 12:00:00</td>
                     <td>ENT12345</td>
                     <td>REC67890</td>
-                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancelar</button></td>
+                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancel</button></td>
                 </tr>
                 <tr class="reservation-item">
                     <td>Reserva4</td>
@@ -149,7 +149,7 @@
                     <td>2024-06-28 12:00:00</td>
                     <td>ENT12345</td>
                     <td>REC67890</td>
-                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancelar</button></td>
+                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancel</button></td>
                 </tr>
                 <tr class="reservation-item">
                     <td>Reserva4</td>
@@ -160,7 +160,7 @@
                     <td>2024-06-28 12:00:00</td>
                     <td>ENT12345</td>
                     <td>REC67890</td>
-                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancelar</button></td>
+                    <td><button class="cancel-button" onclick="cancelReservation(4)">Cancel</button></td>
                 </tr>
                 </tbody>
             </table>
@@ -170,7 +170,7 @@
         <h2>Operations</h2>
         <div class="operations-buttons">
             <button class="operations-button" onclick="location.href='booking_operations.html'">Booking Operations</button>
-            <button class="operations-button" onclick="location.href='slots_operations.html'">Slots Operations</button>
+            <button class="operations-button" onclick="location.href='slots_operations.html'">Slot Operations</button>
         </div>
     </div>
 </div>

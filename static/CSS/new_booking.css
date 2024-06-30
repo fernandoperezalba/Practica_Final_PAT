@@ -66,10 +66,10 @@ body {
     text-decoration: underline;
 }
 
-.reserve-button {
+#reserve-button {
     margin: 10px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     border-radius: 5px;
     background-color: #000000;
@@ -78,6 +78,23 @@ body {
     transition: background-color 0.3s;
 }
 
-.reserve-button:hover {
+#reserve-button:hover {
     background-color: #555555;
+}
+
+form#reservation-form {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre los elementos */
+}
+
+form#reservation-form label,
+form#reservation-form input,
+form#reservation-form button {
+    margin: 0;
+}
+
+form#reservation-form input {
+    width: auto;
+    flex: 1;
 }

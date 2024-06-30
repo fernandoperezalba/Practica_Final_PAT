@@ -1,4 +1,4 @@
-// Añade un evento para que el dropdown se mantenga abierto cuando se está sobre él
+// Añade un evento para que el dropdown se mantenga Open cuando se está sobre él
 const dropdownTogglers = document.querySelectorAll('.nav-item.dropdown');
 dropdownTogglers.forEach(toggler => {
     toggler.addEventListener('mouseover', function() {
@@ -27,10 +27,10 @@ const warehouses = [
         lastReview: '2024-01-01',
         location: null, // Será geocodificado
         slots: [
-            { status: 'Abierto', situation: 'En funcionamiento' },
-            { status: 'Cerrado', situation: 'Bloqueado' },
-            { status: 'Abierto', situation: 'En funcionamiento' },
-            { status: 'Abierto', situation: 'En funcionamiento' }
+            { status: 'Open', situation: 'Working' },
+            { status: 'Closed', situation: 'Blocked' },
+            { status: 'Open', situation: 'Working' },
+            { status: 'Open', situation: 'Working' }
         ]
     },
     {
@@ -42,8 +42,8 @@ const warehouses = [
         lastReview: '2024-01-01',
         location: null, // Será geocodificado
         slots: [
-            { status: 'Abierto', situation: 'En funcionamiento' },
-            { status: 'Abierto', situation: 'En funcionamiento' }
+            { status: 'Open', situation: 'Working' },
+            { status: 'Open', situation: 'Working' }
         ]
     },
     {
@@ -55,8 +55,8 @@ const warehouses = [
         lastReview: '2024-01-01',
         location: null, // Será geocodificado
         slots: [
-            { status: 'Abierto', situation: 'En funcionamiento' },
-            { status: 'Abierto', situation: 'En funcionamiento' }
+            { status: 'Open', situation: 'Working' },
+            { status: 'Open', situation: 'Working' }
         ]
     }
     // Agrega más almacenes según sea necesario
@@ -91,27 +91,22 @@ async function initMap() {
         listItem.className = 'warehouse-item';
         listItem.innerHTML = `
             <div class="warehouse-id" data-index="${index}"><strong>ID:</strong> ${warehouse.id}</div>
-            <div><strong>Dirección:</strong> ${warehouse.address}</div>
-            <div><strong>Capacidad:</strong> ${warehouse.freeCapacity}/${warehouse.maxCapacity}</div>
-            <div><strong>Fecha de creación:</strong> ${warehouse.creationDate}</div>
-            <div><strong>Última revisión:</strong> ${warehouse.lastReview}</div>
-            <div><strong>Disponibilidad:</strong>
-                ${Array(warehouse.maxCapacity).fill().map((_, i) => {
-                    return `<span class="badge ${i < warehouse.freeCapacity ? 'badge-success' : 'badge-danger'}"></span>`;
-                }).join(' ')}
-            </div>
+            <div><strong>Address:</strong> ${warehouse.address}</div>
+            <div><strong>Capacity:</strong> ${warehouse.freeCapacity}/${warehouse.maxCapacity}</div>
+            <div><strong>Creation Date:</strong> ${warehouse.creationDate}</div>
+            <div><strong>Last maintenance check:</strong> ${warehouse.lastReview}</div>
             <div>
-                <strong>Huecos:</strong>
+                <strong>Slots:</strong>
                 ${warehouse.slots.map((slot, i) => {
                     return `<div class="slot">
-                        <span>Hueco ${i + 1}: </span>
+                        <span>Slot ${i + 1}: </span>
                         <select data-id="${warehouse.id}" data-slot="${i}" onchange="updateSlotStatus(this)">
-                            <option value="Abierto"${slot.status === 'Abierto' ? ' selected' : ''}>Abierto</option>
-                            <option value="Cerrado"${slot.status === 'Cerrado' ? ' selected' : ''}>Cerrado</option>
+                            <option value="Open"${slot.status === 'Open' ? ' selected' : ''}>Open</option>
+                            <option value="Closed"${slot.status === 'Closed' ? ' selected' : ''}>Closed</option>
                         </select>
                         <select data-id="${warehouse.id}" data-slot="${i}" onchange="updateSlotSituation(this)">
-                            <option value="En funcionamiento"${slot.situation === 'En funcionamiento' ? ' selected' : ''}>En funcionamiento</option>
-                            <option value="Bloqueado"${slot.situation === 'Bloqueado' ? ' selected' : ''}>Bloqueado</option>
+                            <option value="Working"${slot.situation === 'Working' ? ' selected' : ''}>Working</option>
+                            <option value="Blocked"${slot.situation === 'Blocked' ? ' selected' : ''}>Blocked</option>
                         </select>
                     </div>`;
                 }).join('')}
